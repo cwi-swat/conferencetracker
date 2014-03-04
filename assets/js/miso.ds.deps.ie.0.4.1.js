@@ -8995,7 +8995,7 @@ Version 0.0.1.2
         // correctly escaping various strings when returning json.)
         if (options.fast) {
           
-          options.url = "https://docs.google.com/spreadsheets/ccc?key=" + options.key;
+          options.url = "https://docs.google.com/spreadsheet/pub?key=" + options.key;
                   
           if (typeof options.sheetName === "undefined") {
             options.sheetName = "Sheet1";
@@ -9008,7 +9008,7 @@ Version 0.0.1.2
 
           delete options.sheetName;
         } else {
-          options.url = "https://docs.google.com/spreadsheets/feeds/cells/" + 
+          options.url = "https://spreadsheets.google.com/feeds/cells/" + 
           options.key + "/" + 
           options.worksheet + 
           "/public/basic?alt=json-in-script&callback=";
